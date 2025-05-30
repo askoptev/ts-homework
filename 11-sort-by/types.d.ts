@@ -29,6 +29,9 @@
   чтобы глубже понять процесс создания и использования типов в TypeScript.
 */
 
+
 declare module 'sort-by' {
-  export function sortBy(): any;
+  function sortBy(property: string, map: (_: any, value: any) => any): (a: any, b: any) => number;
+  function sortBy(...args: string[]): (a: any, b: any) => number;
+  export = sortBy;
 }

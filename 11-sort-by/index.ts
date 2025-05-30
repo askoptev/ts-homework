@@ -1,7 +1,5 @@
-import pkg from 'sort-by';
-import { sortBy } from 'sort-by';
+import sortBy  from 'sort-by';
 
-sortBy()
 const users = [
   {
     id: 7,
@@ -23,4 +21,7 @@ const users = [
   },
 ];
 
+users.sort(sortBy('name', 'age'));
+console.log(users);
 users.sort(sortBy())
+
