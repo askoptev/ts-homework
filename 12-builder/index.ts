@@ -11,7 +11,7 @@
   Важно: В конце должен быть метод exec, исполняющий запрос.
  */
 
-enum MethodRequest {
+export enum MethodRequest {
   Get = 'GET',
   Post = 'POST',
   Put = 'PUT',
@@ -21,7 +21,7 @@ enum MethodRequest {
   Options = 'OPTIONS',
 }
 
-class FetchBuilder {
+export class FetchBuilder {
   private init: RequestInit = {};
   private url: string = '';
 
@@ -84,7 +84,6 @@ class FetchBuilder {
 
   async exec(): Promise<Response> {
     const response = await fetch(this.url, this.init);
-    console.log(this);
     return response;
   }
 }
